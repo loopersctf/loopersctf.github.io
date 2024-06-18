@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="bootstrap.css">
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Loopy CTF</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="challenge1.html">Challenge 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="challenge2.html">Challenge 2</a>
+          <span class="visually-hidden">(current)</span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="challenge3.html">Challenge 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2</title>
+    <script>
+        function checkInput() {
+            const userInput = document.getElementById("userInput").value;
+            const base64Message = "QWxsIHlvdXIgYmFzZSBhcmUgYmVsb25nIHRvIHVz";
+            const decodedMessage = atob(base64Message);
+
+            if (userInput === decodedMessage) {
+                alert("Challenge complete! TF}");
+                window.open("challenge3.html", "_blank");
+            } else {
+                alert("Incorrect input. Try again.");
+            }
+        }
+    </script>
+</head>
+<style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+
+<body>
+    <h1>Decode the base64 message and enter it below:</h1>
+    <p>QWxsIHlvdXIgYmFzZSBhcmUgYmVsb25nIHRvIHVz</p>
+    <input type="text" id="userInput">
+    <button type="button" class="btn btn-dark" onclick="checkInput()" >Submit</button>
+
+</body>
+</html>

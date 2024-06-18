@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="bootstrap.css">
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Loopy CTF</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="challenge1.html">Challenge 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="challenge2.html">Challenge 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="challenge3.html">Challenge 3</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        input[type="text"] {
+            background-color: #000;
+            color: #0f0;
+            border: 1px solid #0f0;
+            padding: 5px;
+            font-family: monospace;
+        }
+
+        button {
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Enter your answer">
+    <button onclick="checkInput()">Submit</button>
+
+    <script>
+        function checkInput() {
+            const userInput = document.getElementById("userInput").value;
+            const base64Message = "e0xDVEZ9Q3J5cHRDaEBtcA==";
+            const decodedMessage = atob(base64Message);
+
+            if (userInput === decodedMessage) {
+                alert("Challenge complete! TF}");
+                window.open("Completed.html", "_blank");
+            } else {
+                alert("Incorrect input. Try again.");
+            }
+        }
+    </script>
+</body>
+</html>

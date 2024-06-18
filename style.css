@@ -1,0 +1,50 @@
+body {
+  background-color: #333;
+  font-family: monospace;
+  color:lightblue;
+}
+
+.terminal {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+  background-color: #555;
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+
+.username {
+  color: #999;
+}
+
+.hostname {
+  color: #ccc;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+.terminal-prompt {
+  color: #999;
+}
+
+.terminal-output {
+  padding: 10px;
+}
+
+#command-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #555;
+  color: #ccc;
+}
