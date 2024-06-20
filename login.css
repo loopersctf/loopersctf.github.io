@@ -168,10 +168,10 @@ input[type="submit"] {
   --loginBorderRadus: 0.25rem;
   --loginColor: #eee;
 
-  --loginInputBackgroundColor: #3b4148;
+  --loginInputBackgroundColor: black;
   --loginInputHoverBackgroundColor: #434a52;
 
-  --loginLabelBackgroundColor: #363b41;
+  --loginLabelBackgroundColor: black;
 
   --loginSubmitBackgroundColor: #0d848f;
   --loginSubmitColor: #eee;
@@ -193,7 +193,7 @@ input[type="submit"] {
 }
 
 .login label {
-  background-color: #363b41;
+  background-color: black;
   background-color: var(--loginLabelBackgroundColor);
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
