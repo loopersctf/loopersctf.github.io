@@ -1,39 +1,68 @@
-<link rel="stylesheet" href="bootstrap.css">
-
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Loopy CTF</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="challenge1.html">Challenge 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="challenge2.html">Challenge 2</a>
-          <span class="visually-hidden">(current)</span>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="challenge3.html">Challenge 3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge 2</title>
+<title>Loopers CTF</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Inline CSS Styles -->
+<style>
+body {font-family: "Lato", sans-serif; background-color:#333333;}
+.mySlides {display: none}
+p{color:white;}
+h2{color:white;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="challenge1.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Challenge 1</a>
+    <a href="challenge2.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Challenge 2</a>
+    <a href="challenge3.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Challenge 3</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Login</a>
+
+    <!-- Dropdown Navbar -->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Coming Soon</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="challenge1.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Challenge 1</a>
+  <a href="challenge2.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Challenge 2</a>
+  <a href="challenge3.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Challenge 3</a>
+  <a href="login.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Login</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <style>
+  .responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+margin-left: auto;
+margin-right: auto;
+  }
+  </style>
+
+  <!-- The Challenge Section -->
+  <title>Challenge 2</title>
     <script>
         function checkInput() {
             const userInput = document.getElementById("userInput").value;
@@ -48,7 +77,6 @@
             }
         }
     </script>
-</head>
 <style>
         .center-container {
             display: flex;
@@ -59,10 +87,43 @@
     </style>
 
 <body>
-    <h1>Decode the base64 message and enter it below:</h1>
+    <h2>Decode the base64 message and enter it below:</h2>
     <p>QWxsIHlvdXIgYmFzZSBhcmUgYmVsb25nIHRvIHVz</p>
     <input type="text" id="userInput">
-    <button type="button" class="btn btn-dark" onclick="checkInput()" >Submit</button>
+    <button type="button" class="w3-button w3-black" onclick="checkInput()" >Submit</button>
+
+</body>
+
+<!--Style for Footer -->
+<style>
+a{background-color:transparent;}
+</style>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-xlarge">
+  <p class="w3-medium">CSS template is used is from <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<!-- Javascript -->
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
